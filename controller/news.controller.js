@@ -54,6 +54,14 @@ function getNews(req, res) {
                 }
             }
 
+            const numbersToProcess100 = [ "556", "255", "000",  "100", "200", "300", "400", "500", "600", "700", "800", "900"];
+            for (const number of numbersToProcess100) {
+                if (threeDigitFrequency[number] > 60) {
+                    threeDigitFrequency[number] = Math.floor((threeDigitFrequency[number] - 30) / 3.5);
+                }
+            }
+
+            // ทำการปัดลงเป็นจำนวนเต็มก่อนแสดงผล
             for (const number in twoDigitFrequency) {
                 twoDigitFrequency[number] = Math.floor(twoDigitFrequency[number]);
             }
@@ -62,9 +70,27 @@ function getNews(req, res) {
                 threeDigitFrequency[number] = Math.floor(threeDigitFrequency[number]);
             }
 
+            // คำนวณเปอร์เซ็นต์
+            const totalTwoDigitFrequency = Object.values(twoDigitFrequency).reduce((acc, val) => acc + val, 0);
+            const totalThreeDigitFrequency = Object.values(threeDigitFrequency).reduce((acc, val) => acc + val, 0);
+
+            const twoDigitPercentage = {};
+            const threeDigitPercentage = {};
+
+            for (const number in twoDigitFrequency) {
+                twoDigitPercentage[number] = ((twoDigitFrequency[number] / totalTwoDigitFrequency) * 100).toFixed(2);
+            }
+
+            for (const number in threeDigitFrequency) {
+                threeDigitPercentage[number] = ((threeDigitFrequency[number] / totalThreeDigitFrequency) * 100).toFixed(2);
+            }
+
+            // ส่งข้อมูลที่ค้นพบกลับเป็น JSON ในการตอบสนอง
             res.json({
                 twoDigitFrequency,
                 threeDigitFrequency,
+                twoDigitPercentage,
+                threeDigitPercentage
             });
         })
         .catch((error) => {
