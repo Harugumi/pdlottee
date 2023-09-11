@@ -43,7 +43,8 @@ app.use("/news", newsRoute);
 
 //2023-01
 app.get("/search", (req, res) => {
-    callSearchData(req.query.input, (data) => {
+    const { month, year } = req.query;
+    callSearchData(month, year, (data) => {
         res.send(data);
         res.end();
     });
