@@ -5,7 +5,7 @@ const client = getDatabaseConfig();
 async function searchData(month, year) {
     const dbName = "lottee";
     await client.connect();
-    console.log("Connected successfully to server");
+    // console.log("Connected successfully to server");
     const db = client.db(dbName);
     const collection = db.collection("allmonth");
 

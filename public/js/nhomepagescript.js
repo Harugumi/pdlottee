@@ -33,7 +33,9 @@ submitBtn.addEventListener("click", () => {
 
 function createTable(data) {
     const output = document.getElementById("output");
-    console.log(data[0]);
+    if (output.childNodes.length) {
+        output.removeChild(output.childNodes[0]);
+    }
     const table = document.createElement("TABLE");
     output.appendChild(table);
     const tableHeaderRow = document.createElement("TR");
