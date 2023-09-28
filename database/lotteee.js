@@ -22,7 +22,24 @@ async function searchData(month, year) {
     }
 
     client.close();
-    return findResult;
+
+    //-----------------------------------------------------------
+    const front3Array = [];
+    findResult.forEach((item) => {
+        front3Array.push(item["3 front 1"], item["3 front 2"]);
+    });
+    const front3ArrayNoRepeat = [...new Set(front3Array)];
+    const front3Obj = {};
+    front3ArrayNoRepeat.forEach((item) => {
+        const results = front3Array.filter((num) => {
+            return num === item;
+        });
+
+        front3Obj[`${item}`] = results.length;
+    });
+    //-----------------------------------------------------------
+
+    return front3Obj;
 }
 
 module.exports = {
