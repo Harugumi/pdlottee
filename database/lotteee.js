@@ -24,6 +24,7 @@ async function searchData(month, year) {
     client.close();
 
     //-----------------------------------------------------------
+    /*
     const front3Array = [];
     findResult.forEach((item) => {
         front3Array.push(item["3 front 1"], item["3 front 2"]);
@@ -37,9 +38,11 @@ async function searchData(month, year) {
 
         front3Obj[`${item}`] = results.length;
     });
-    //-----------------------------------------------------------
 
     return front3Obj;
+    */
+    //-----------------------------------------------------------
+
     /*
     const bottom3Array = [];
     findResult.forEach((item) => {
@@ -56,7 +59,7 @@ async function searchData(month, year) {
     });
     return bottom3Obj;
     */
-//---------------------------------------------------------------------------------//
+    //---------------------------------------------------------------------------------//
     
     const bottom2Array = [];
     findResult.forEach((item) => {
@@ -73,7 +76,7 @@ async function searchData(month, year) {
     });
     return bottom2Obj;
     
-//---------------------------------------------------------------------------------//
+    //---------------------------------------------------------------------------------//
     /*
     const jackpot6Array = [];
     findResult.forEach((item) => {
