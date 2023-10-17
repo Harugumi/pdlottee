@@ -2,15 +2,15 @@
         .container-nav {
             max-width: 1000px;
             margin: 0 auto;
-            background-color: #f0f0f0;
+            background-color: #F1EFEF;
         }
 
         .container-content {
             max-width: 900px;
             margin: 20px auto;
             padding: 20px;
-            border: 1px solid #ccc;
-            background-color: #f7f7f7;
+            border: 1px solid #7D7C7C;
+            background-color: #F1EFEF;
             border-radius: 10px;
         }
 
@@ -27,7 +27,7 @@
             list-style-type: none;
             margin: 0;
             padding: 0;
-            background-color: #333;
+            background-color: #191717;
             overflow: hidden;
             transition: top 0.3s ease;
         }
@@ -38,14 +38,14 @@
 
         ul.menu li a {
             display: block;
-            color: white;
+            color: #F1EFEF;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
         }
 
         ul.menu li a:hover {
-            background-color: #111;
+            background-color: #191717;
         }
 
         ul.menu.sticky {
@@ -58,13 +58,13 @@
         }
 
         ul.menu.sticky li a {
-            background-color: #333;
+            background-color: #191717;
         }
 
         /* สไตล์ส่วน footer */
         footer {
-            background-color: #333333;
-            color: white;
+            background-color: #191717;
+            color: #F1EFEF;
             margin: 0 auto;
             max-width: 1000px;
             text-align: center;

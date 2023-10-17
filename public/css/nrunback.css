@@ -1,10 +1,10 @@
 .table {
-    max-width: auto;
-    max-height: auto;
+    max-width: 300;
+    max-height: 200;
     margin: 20px auto;
     padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #f7f7f7;
+    border: 1px solid #7D7C7C;
+    background-color: #F1EFEF;
     border-radius: 10px;
 }
 
@@ -14,7 +14,9 @@
     margin-right: auto;
     width: 50%;
 }
-table,
+table{
+    text-align: center;
+}
 th,
 td {
     border: 1px solid black;
