@@ -38,8 +38,10 @@ async function searchData(month, year) {
 
         front3Obj[`${item}`] = results.length;
     });
-
-    return front3Obj;
+    const sortedfront3Obj = Object.fromEntries(
+        Object.entries(front3Obj).sort((a, b) => b[1] - a[1])
+    );
+    return sortedfront3Obj;
     */
     //-----------------------------------------------------------
 
@@ -57,7 +59,10 @@ async function searchData(month, year) {
 
         bottom3Obj[`${item}`] = results.length;
     });
-    return bottom3Obj;
+    const sortedBottom3Obj = Object.fromEntries(
+        Object.entries(bottom3Obj).sort((a, b) => b[1] - a[1])
+    );
+    return sortedBottom3Obj;
     */
     //---------------------------------------------------------------------------------//
     
@@ -65,6 +70,7 @@ async function searchData(month, year) {
     findResult.forEach((item) => {
         bottom2Array.push(item["2 bottom"]);
     });
+
     const bottom2ArrayNoRepeat = [...new Set(bottom2Array)];
     const bottom2Obj = {};
     bottom2ArrayNoRepeat.forEach((item) => {
@@ -74,25 +80,14 @@ async function searchData(month, year) {
 
         bottom2Obj[`${item}`] = results.length;
     });
-    return bottom2Obj;
-    
-    //---------------------------------------------------------------------------------//
-    /*
-    const jackpot6Array = [];
-    findResult.forEach((item) => {
-        jackpot6Array.push(item["jackpot"]);
-    });
-    const jackpot6ArrayNoRepeat = [...new Set(jackpot6Array)];
-    const jackpotObj = {};
-    jackpot6ArrayNoRepeat.forEach((item) => {
-        const results = jackpot6Array.filter((num) => {
-            return num === item;
-        });
 
-        jackpotObj[`${item}`] = results.length;
-    });
-     return jackpotObj;
-    */
+    // เรียงลำดับค่าตามจำนวน count
+    const sortedBottom2Obj = Object.fromEntries(
+        Object.entries(bottom2Obj).sort((a, b) => b[1] - a[1])
+    );
+
+    return sortedBottom2Obj;
+
 }
 
 module.exports = {
