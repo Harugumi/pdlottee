@@ -1,14 +1,16 @@
         /* กำหนดขนาดของ หน้าจอ */
         .container-nav {
             max-width: 1000px;
+            max-height: auto;
             margin: 0 auto;
             background-color: #F1EFEF;
+            padding: 0 ;
         }
 
         .container-content {
             max-width: 900px;
             margin: 20px auto;
-            padding: 20px;
+            padding: 0 ;
             border: 1px solid #7D7C7C;
             background-color: #F1EFEF;
             border-radius: 10px;
@@ -62,10 +64,18 @@
         }
 
         /* สไตล์ส่วน footer */
-        footer {
+        .footer-container{
             background-color: #191717;
             color: #F1EFEF;
             margin: 0 auto;
             max-width: 1000px;
             text-align: center;
+        }
+
+
+
+
+        
+        html{
+            background-color: blue;
         }

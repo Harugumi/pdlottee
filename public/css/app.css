@@ -7,8 +7,9 @@ h1 {
 #result {
     margin-top: 20px;
     border: 1px solid #7D7C7C;
-    padding: 20px;
+    padding: 30px;
     background-color: #F1EFEF;
+    width: auto ;
 }
 table {
     border-collapse: collapse;
