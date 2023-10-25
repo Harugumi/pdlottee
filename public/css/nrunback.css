@@ -1,12 +1,13 @@
 .monthtable {
-    max-width: 300;
-    max-height: 200;
-    margin: 20px auto;
-    padding: 20px;
+    margin: auto;
     border: 1px solid #7D7C7C;
+    padding: 30px;
     background-color: #F1EFEF;
+    max-width: 800px;
+    max-height: 700px;
+    overflow: auto; /* เพิ่ม overflow property */
+    overflow-y: scroll; /* เพิ่ม overflow-y property เป็น scroll */
     border-radius: 10px;
-    text-align: center;
     
     
 }
