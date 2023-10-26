@@ -3,7 +3,7 @@
             max-width: 1000px;
             max-height: auto;
             margin: 0 auto;
-            background-color: #F1EFEF;
+            background-color: #CCC8AA; /* กรอบนอกสุด */
             padding: 0 ;
         }
 
@@ -13,7 +13,7 @@
             margin: 20px auto;
             padding: 0 ;
             border: 1px solid #7D7C7C;
-            background-color: #F1EFEF;
+            background-color: #F1EFEF; /* กรอบในสุด */
             border-radius: 10px;
         }
 
@@ -30,7 +30,7 @@
             list-style-type: none;
             margin: 0;
             padding: 0;
-            background-color: #191717;
+            background-color: #191717; /* ขอบบน */
             overflow: hidden;
             transition: top 0.3s ease;
         }
@@ -41,7 +41,7 @@
 
         ul.menu li a {
             display: block;
-            color: #F1EFEF;
+            color: #FAF3F0;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
@@ -66,8 +66,8 @@
 
         /* สไตล์ส่วน footer */
         .footer-container{
-            background-color: #191717;
-            color: #F1EFEF;
+            background-color: #191717; /* ขอบล่าง */
+            color: #FAF3F0;
             margin: 0 auto;
             max-width: 1000px;
             text-align: center;
@@ -78,5 +78,5 @@
 
         
         html{
-            background-color: blue;
+            background-color: #FAF3F0;
         }
