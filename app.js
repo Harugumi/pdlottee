@@ -20,11 +20,11 @@ app.use(express.static("public"));
 app.use(express.static("views"));
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/views/nhome.html");
+    res.sendFile(__dirname + "/views/index.html");
 });
 
-app.get("/views/nhome.html", (req, res) => {
-    res.sendFile(__dirname + "/views/nhome.html");
+app.get("/views/index.html", (req, res) => {
+    res.sendFile(__dirname + "/views/index.html");
 });
 
 app.get("/views/ncal.html", (req, res) => {
