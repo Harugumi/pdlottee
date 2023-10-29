@@ -2,17 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FastAPI Web Page</title>
+    <style>
+        /* กำหนดขนาดของ หน้าจอ */
+        .container-nav {
+            max-width: 1000px;
+            max-height: auto;
+            margin: 0 auto;
+            background-color: #CCC8AA; /* กรอบนอกสุด */
+            padding: 0 ;
+        }
+
+        .container-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 ;
+            border: 1px solid #7D7C7C;
+            background-color: #F1EFEF; /* กรอบในสุด */
+            border-radius: 10px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ct-v ct-c body เอามาให้หมด */
+
+        /* ส่วนเมยูบาร์ */
+        ul.menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #191717; /* ขอบบน */
+            overflow: hidden;
+            transition: top 0.3s ease;
+        }
+
+        ul.menu li {
+            float: left;
+        }
+
+        ul.menu li a {
+            display: block;
+            color: #FAF3F0;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        ul.menu li a:hover {
+            background-color: #191717;
+        }
+
+        ul.menu.sticky {
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: auto;
+            z-index: 100;
+        }
+
+        ul.menu.sticky li a {
+            background-color: #191717;
+        }
+
+        /* สไตล์ส่วน footer */
+        .footer-container{
+            background-color: #191717; /* ขอบล่าง */
+            color: #FAF3F0;
+            margin: 0 auto;
+            max-width: 1000px;
+            text-align: center;
+        }
+
+        
+        html{
+            background-color: #FAF3F0; /* สีพื้นหลัง */
+        }
+    </style>
+
+    <title>Prediction Page</title>
 </head>
 <body>
     
-    <h1>FastAPI Web Page</h1>
-    <p>Enter a number to predict:</p>
-    <input type="number" id="input-data" placeholder="Enter a number">
-    <button id="predict-button">Predict</button>
-    <p id="prediction-result"></p>
-    
+    <div class="container-nav">
+        <!-- เมนูบาร์ -->
+        <ul class="menu" id="navbar">
+            <li><a href="/views/index.html">หน้าแรก</a></li>
+            <li><a href="/views/ncal.html">ทำนายเลขตามวันเกิด</a></li>
+            <li><a href="/views/nrunback.html">ความน่าจะเป็นของเลข</a></li>
+            <li><a href="/views/app.html">เลขฮิตในช่วงนี้</a></li>
+        </ul>
+
+        <div class="container-content">
+            <!-- เนื้อหา -->
+            <div class="content">
+                <h1>Prediction Page</h1>
+                <p>Enter a number to predict:</p>
+                <input type="number" id="input-data" placeholder="Enter a number">
+                <button id="predict-button">Predict</button>
+                <p id="prediction-result"></p>
+                                            
+            </div>
+        </div>
+        <div class="footer-container">
+            <p>ติดตามเรา <a href="https://github.com/Harugumi/pdlottee"><i class="">GITHUB</i></a> </p>  
+            <p>&copy; 2023 สงวนลิขสิทธิ์</p>        
+        </div>
+    </div>
+
+
 
     <script>
         
@@ -59,5 +163,6 @@
         window.addEventListener("load", receiveAndDisplayResult);
 
     </script>
+    <script src="I:\prototable (1)\prototable\public\js\nhomepagescript.js"></script>
 </body>
 </html>

@@ -34,5 +34,7 @@ if len(point_result) > 14:
 # แบ่งเลขออกเป็น 2 ตัว
 split_result = ' '.join(point_result[i:i+2] for i in range(0, len(point_result), 2))
 
+split_result = split_result[2:]
+
 # แสดงผลลัพธ์
 print(split_result)

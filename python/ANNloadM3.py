@@ -34,5 +34,6 @@ if len(point_result) > 12:
 # แบ่งเลขออกเป็น 2 ตัว
 split_result = ' '.join(point_result[i:i+3] for i in range(0, len(point_result), 3))
 
+
 # แสดงผลลัพธ์
 print(split_result)

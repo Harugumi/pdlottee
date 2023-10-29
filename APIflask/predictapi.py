@@ -44,6 +44,8 @@ def predict(data: InputData):
             point_result = point_result[:14]
 
         split_result = ' '.join(point_result[i:i+2] for i in range(0, len(point_result), 2))
+        
+        split_result = split_result[2:]
 
         return {"prediction": split_result}
     except Exception as e:
